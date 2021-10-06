@@ -13,31 +13,29 @@ import javax.validation.constraints.NotNull;
 public class Employee_Info {
 
     @Id
+    @Column(nullable = false)
     @NotNull(message = "The employee's ID is required.")
-    @Column(nullable = false)
-    private long EmployeeID;
+    private Long EmployeeID;
 
-    @NotBlank(message = "The employee's First Name is required.")
     @Column(nullable = false)
+    @NotBlank(message = "The employee's First Name is required.")
     private String FirstName;
 
-    @NotBlank(message = "The employee's Middle Name is required.")
     @Column(nullable = false)
+    @NotBlank(message = "The employee's Middle Name is required.")
     private String MiddleName;
 
-    @NotBlank(message = "The employee's Last Name is required.")
     @Column(nullable = false)
+    @NotBlank(message = "The employee's Last Name is required.")
     private String LastName;
 
-    @NotBlank(message = "The employee's Role is required.")
     @Column(nullable = false)
-    private int EmployeeRole;
+    @NotBlank(message = "The employee's Role is required.")
+    private Long EmployeeRole;
 
     private String Email;
 
-    @NotBlank(message = "The employee's Phone Number is required.")
     @Column(nullable = false)
+    @NotBlank(message = "The employee's Phone Number is required.")
     private String Phone;
-
-
 }
